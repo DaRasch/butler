@@ -31,7 +31,7 @@ class Registry:
                 raise TypeError(key)
 
     def __getitem__(self, key: str | Callable) -> Task:
-        self._graph[self._index(key)]
+        return self._graph[self._index(key)]
 
     def __iter__(self) -> Iterator[Task]:
         yield from self._graph.nodes()
