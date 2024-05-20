@@ -1,0 +1,81 @@
+# Guide (user-friendly):
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "butler"
+# version = "1.0.0"
+license = {file = "LICENSE"}
+dynamic = ["version"]
+
+description = "A lightweight meta build system."
+readme = "README.md"
+keywords = ["build", "tool", "make"]
+classifiers = [
+  # 2 - Pre-Alpha
+  # 3 - Alpha
+  # 4 - Beta
+  # 5 - Production/Stable
+  "Development Status :: 2 - Pre-Alpha",
+
+  "Environment :: Console",
+  "Operating System :: POSIX :: Linux",
+
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  "License :: OSI Approved :: MIT License",
+
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+authors = [
+  {name = "Philipp Rasch", email = "ph.r@hotmail.de"},
+]
+maintainers = [
+  {name = "Philipp Rasch", email = "ph.r@hotmail.de"},
+]
+
+requires-python = ">=3.12"
+dependencies = [
+  "rustworkx>=0.14.2"
+]
+
+# https://packaging.python.org/en/latest/specifications/dependency-specifiers/#extras
+[project.optional-dependencies]
+dev = []
+test = []
+
+[project.scripts]
+butler = "_main:main"
+
+[project.urls]
+# "Homepage" = "https://github.com/pypa/sampleproject"
+# "Bug Reports" = "https://github.com/pypa/sampleproject/issues"
+# "Funding" = "https://donate.pypi.org"
+# "Say Thanks!" = "http://saythanks.io/to/example"
+# "Source" = "https://github.com/pypa/sampleproject/"
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+
+
+[tool.ruff.lint]
+# select = []
+# ignore = []
+
+# fixable = ["ALL"]
+# unfixable = []
+
+typing-modules = ['typing']

@@ -1,0 +1,15 @@
+# Project specific
+/build/
+/dist/
+/.venv/
+/.env/
+
+# Language specific
+*.egg-info/
+*.egg
+__pycache__/
+*.py[cod]
+*.so
+
+# Other
+*~
