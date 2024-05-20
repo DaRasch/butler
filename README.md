@@ -54,7 +54,7 @@ Being a library instead of its own language - be that an actual programming lang
 
 Another benefit of the library approach is that it does not require a custom language server or other dev tools. All the tools already exist for python.
 
-### [WIP] Discoverable
+### Discoverable
 
 Butler is designed to be easily introspectable via its commandline interface. Annoyed by having to read through dozens of task definition files to figure out the execution order for a given set of tasks? No more!
 
